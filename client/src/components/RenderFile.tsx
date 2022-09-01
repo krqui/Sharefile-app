@@ -14,4 +14,4 @@ const RenderFile:FunctionComponent<{file:IFile}> = ({file:{format,sizeInBytes,na
     )
 }
 
-export default RenderFile;//1:31:19
+export default RenderFile;

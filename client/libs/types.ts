@@ -3,4 +3,4 @@ export interface IFile {
     sizeInBytes:number;
     format:string;
     id?:string
-}//1:31:20
+}
