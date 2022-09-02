@@ -1,6 +1,6 @@
-/*@tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities;*/
+@tailwind utilities;
 
 /*
 html,
@@ -29,3 +29,8 @@ a {
     background: black;
   }
 }*/
+@layer components {
+  .button {
+    @apply p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none;
+  }
+}

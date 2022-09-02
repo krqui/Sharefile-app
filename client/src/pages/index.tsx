@@ -9,7 +9,7 @@ export default function Home() {
   const [downloadPageLink, setDownloadPageLink] = useState(null);
   const [uploadState, setUploadState] = useState<"Uploading"|"Upload Failed"|"Uploaded"|"Upload">("Upload");
   // debo hacer npm install --save react-dropzone
-
+//2:02:57
   const handleUpload = async () => {
     if (uploadState === "Uploading") return;
     setUploadState("Uploading");
@@ -51,7 +51,7 @@ export default function Home() {
         {file?.name}
         {/*upload button */}
         {!downloadPageLink && file && (
-          <button className="p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none" 
+          <button className="button" 
           onClick={handleUpload}>{uploadState}</button>
         )}
         
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="p-2 text-center">
             <DownloadFile downloadPageLink={downloadPageLink} />
             
-            <button className="p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none"
+            <button className="button"
                     onClick={resetComponent}>
               Upload New File
             </button>
