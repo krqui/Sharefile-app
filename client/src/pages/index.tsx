@@ -1,5 +1,6 @@
 import DownloadFile from "@components/DownloadFile";
 import DropZoneComponent from "@components/DropZoneComponent";
+import EmailForm from "@components/EmailForm";
 import RenderFile from "@components/RenderFile";
 import axios from "axios";
 import { useState } from "react";
@@ -9,7 +10,7 @@ export default function Home() {
   const [downloadPageLink, setDownloadPageLink] = useState(null);
   const [uploadState, setUploadState] = useState<"Uploading"|"Upload Failed"|"Uploaded"|"Upload">("Upload");
   // debo hacer npm install --save react-dropzone
-//2:02:57
+//2:44:11
   const handleUpload = async () => {
     if (uploadState === "Uploading") return;
     setUploadState("Uploading");
@@ -58,7 +59,8 @@ export default function Home() {
         { downloadPageLink && (
           <div className="p-2 text-center">
             <DownloadFile downloadPageLink={downloadPageLink} />
-            
+            {/*Email form*/}
+            <EmailForm id={id}></EmailForm>
             <button className="button"
                     onClick={resetComponent}>
               Upload New File
